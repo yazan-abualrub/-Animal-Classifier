@@ -1,0 +1,98 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s;
+}
+
+.wrapper:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+#drop-area {
+    border: 3px dashed #66a6ff;
+    border-radius: 15px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #f0f8ff;
+    position: relative;
+    overflow: hidden;
+}
+
+#drop-area.dragover {
+    background: #d0f0fd;
+    border-color: #33aaff;
+    box-shadow: 0 0 20px rgba(51,170,255,0.5);
+}
+
+#drop-area p {
+    font-size: 16px;
+    color: #555;
+    z-index: 2;
+}
+
+#drop-area img {
+    max-width: 100%;
+    max-height: 180px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#drop-area img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #66a6ff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.result-box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
