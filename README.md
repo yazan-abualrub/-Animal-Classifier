@@ -1,5 +1,4 @@
-"# -Animal-Classifier" 
-## 🐱🐶 Animal Classifier
+## Animal Classifier
 
 An intelligent, web-based image classifier that uses transfer learning with **MobileNetV2** to accurately identify various animals, including Cats, Dogs, and Wildlife. The application features a lightweight front-end for image submission and a high-performance backend for inference.
 
